@@ -1,11 +1,10 @@
-  let edad = 77;
-function edad1(edad){
-  
-    if (edad >= 14 && edad <= 90){
-        return true;
-    }else{
-        return false;
-    }
+let edad = 77;
+function edad1(edad) {
+  if (edad >= 14 && edad <= 90) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /*otra opcion seria
