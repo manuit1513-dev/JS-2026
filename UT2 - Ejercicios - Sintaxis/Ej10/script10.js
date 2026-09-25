@@ -14,4 +14,8 @@ function edad1(edad) {
     }
         
 */
-console.log(edad1(edad));
+console.log(edad + ":" + edad1(edad));
+edad = 0;
+console.log(edad + ":" + edad1(edad));
+edad = 90;
+console.log(edad + ":" + edad1(edad));
