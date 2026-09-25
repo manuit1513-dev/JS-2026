@@ -1,4 +1,4 @@
-let edad = prompt("Introduzca su edad:", "");
+let edad;
 function edad2(edad) {
   if (isNaN(edad)) {
     return "Solo puede introducir numeros";
@@ -17,4 +17,11 @@ function edad2(edad) {
   }
 }
 
-edad2(edad);
+console.log(edad2(-1));
+console.log(edad2(0));
+console.log(edad2(1));
+console.log(edad2(23));
+console.log(edad2(48));
+console.log(edad2(99));
+console.log(edad2(0));
+console.log(edad2("yyyyyy"));
