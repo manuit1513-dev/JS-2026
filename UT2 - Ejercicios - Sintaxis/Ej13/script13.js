@@ -1,7 +1,7 @@
 let n;
 let resultado;
 function tablaMultipliicar(n) {
-  if (n != Number) {
+  if (typeof n !== "number" || Number.isNaN(n)) {
     console.log("ERROR");
   } else {
     console.log("la tabla de multiplicar del: ", n);
@@ -12,3 +12,4 @@ function tablaMultipliicar(n) {
   }
 }
 tablaMultipliicar("hy");
+tablaMultipliicar(7);
