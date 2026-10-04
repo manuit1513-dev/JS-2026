@@ -16,9 +16,9 @@ function tablero(numColumnas, numFilas) {
   }
   for (let j = 1; j <= numFilas; j++) {
     if (j % 2 == 0) {
-      console.log(lineaPar);
-    } else {
       console.log(lineaImpar);
+    } else {
+      console.log(lineaPar);
     }
   }
 }
