@@ -7,11 +7,11 @@ function tablero(numColumnas, numFilas) {
   let lineaImpar = "";
   for (let i = 1; i <= numColumnas; i++) {
     if (i % 2 == 0) {
-      lineaPar += " ";
-      lineaImpar += "#";
-    } else {
-      lineaImpar += " ";
       lineaPar += "#";
+      lineaImpar += " ";
+    } else {
+      lineaImpar += "#";
+      lineaPar += " ";
     }
   }
   for (let j = 1; j <= numFilas; j++) {
