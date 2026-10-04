@@ -1,6 +1,6 @@
 let contador = 0;
 function contarLetra(cad, letra) {
-  contador = cad.indexOf(letra);
-  return contador;
+  return cad.split(letra).length - 1;
 }
-contarLetra(" pez pez pez pez pez hola adios hola", "z");
+console.log(contarLetra("programacion", "o"));
+console.log(contarLetra("hola", "z")); 
