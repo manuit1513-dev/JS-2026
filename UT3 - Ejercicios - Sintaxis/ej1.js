@@ -1,5 +1,6 @@
-let srt = "manuel";
+let frase = "hola yo soy manuel";
 function inicialMay(srt) {
-  console.log(srt.at(0).toUpperCase() + srt.slice(1));
+  return srt.at(0).toUpperCase() + srt.slice(1);
 }
-inicialMay(srt);
+inicialMay(frase);
+console.log(inicialMay(frase));

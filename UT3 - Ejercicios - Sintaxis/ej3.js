@@ -1,10 +1,10 @@
-let srt = "universal";
-let srt2 = "Lo que me gustaría contar sobre este tema es:";
-let maxLong = 20;
-function truncar(srt, maxLong) {
-  if (srt2.length > maxLong) {
-    srt2 = srt2.slice(0, maxLong) + "…";
-    console.log(srt2);
+function truncar(srt = "", maxLong) {
+  if (srt.length > maxLong) {
+    srt = srt.slice(0, maxLong) + "…";
+    return srt;
+  } else {
+    return srt;
   }
 }
-truncar(srt2, maxLong);
+console.log(truncar("universal", 10));
+console.log(truncar("Lo que me gustaría contar sobre este tema es:", 20));

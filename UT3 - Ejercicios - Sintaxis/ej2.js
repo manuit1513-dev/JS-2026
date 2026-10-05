@@ -1,9 +1,11 @@
-let srt = "XXX";
 function comprobarSpam(srt = "") {
-  if (srt.includes("gratis") || srt.includes("XXX")) {
-    console.log("true");
+  srt = srt.toLowerCase();
+  if (srt.includes("gratis") || srt.includes("xxx")) {
+    return true;
   } else {
-    console.log("false");
+    return false;
   }
 }
-comprobarSpam(srt);
+console.log(comprobarSpam("XXX"));
+console.log(comprobarSpam("GRATIS"));
+console.log(comprobarSpam("abduscan"));
