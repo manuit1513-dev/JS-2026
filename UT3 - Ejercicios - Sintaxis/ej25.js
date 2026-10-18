@@ -1,30 +1,29 @@
-let miVentana = null;
+let ventanaAbierta = null;
+
 function abrirVentana(url, ancho, alto) {
-  let x = (screen.width - ancho) / 2;
-  let y = (screen.height - alto) / 2;
+  let left = (screen.width - ancho) / 2;
+  let top = (screen.height - alto) / 2;
 
-  let win = window.open(
-    url,
-    "_blank",
-    "width" + ancho + ",height" + alto + ",left" + x + ",top" + y
-  );
+  let caracteristicas = `width=${ancho},height=${alto},left=${left},top=${top}`;
+  let ventana = window.open(url, "emergente", caracteristicas);
 
-  if (!win) {
-    console.log("El navegador bloqueo la ventana");
+  if (ventana === null) {
+    console.log("El navegador ha bloqueado la ventana emergente");
     return null;
   }
 
-  return win;
+  return ventana;
 }
 
-function probarAbrir() {
-  miVentana = abrirVentana("https://www.wikipedia.org/", 800, 600);
+function abrir() {
+  ventanaAbierta = abrirVentana("https://www.mozilla.org", 600, 400);
 }
 
-function cerrarVentana() {
-  if (miVentana && !miVentana.closed) {
-    miVentana.close();
+function cerrar() {
+  if (ventanaAbierta && !ventanaAbierta.closed) {
+    ventanaAbierta.close();
+    console.log("Ventana cerrada");
   } else {
-    console.log("No hay ninguna ventana abierta");
+    console.log("No hay ninguna ventana abierta que cerrar");
   }
 }
