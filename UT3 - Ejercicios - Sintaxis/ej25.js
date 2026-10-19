@@ -9,14 +9,13 @@ function abrirVentana(url, ancho, alto) {
 
   if (ventana === null) {
     console.log("El navegador ha bloqueado la ventana emergente");
-    return null;
   }
 
   return ventana;
 }
 
 function abrir() {
-  ventanaAbierta = abrirVentana("https://www.mozilla.org", 600, 400);
+  ventanaAbierta = abrirVentana("about:blank", 600, 400);
 }
 
 function cerrar() {
