@@ -4,7 +4,7 @@ console.log(styles);
 styles.push("Rock-n-Roll");
 console.log(styles);
 
-styles[1] = "Classics";
+styles[Math.floor(styles.length / 2)] = "Classics";
 console.log(styles);
 
 let primerElemento = styles.shift();
