@@ -5,14 +5,11 @@ let salaries = {
 };
 function sumarSalarios(salarios) {
   let sum = 0;
-  if (Object.keys(salarios).length == 0) {
-    sum = 0;
-  } else {
-    let numeros = Object.values(salarios);
 
-    for (const num of numeros) {
-      sum += num;
-    }
+  let numeros = Object.values(salarios);
+
+  for (const num of numeros) {
+    sum += num;
   }
 
   return sum;
