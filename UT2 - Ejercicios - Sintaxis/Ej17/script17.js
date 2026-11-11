@@ -1,9 +1,13 @@
-function pedirNumeroMayor100() {
-  let mensaje = prompt("Dime un numero mayor que 100:");
-  for (; mensaje < 100; mensaje = prompt("Dime un numero mayor que 100:")) {
-      
-  }
-  return mensaje;
-}
-let r = pedirNumeroMayor100();
-console.log(r);
+function pedirNumeroMayor100(){
+  let entrada = prompt("introdizca un numero mayor de 100;");
+  while(Number(entrada) <= 100){
+    
+    if(entrada == null || entrada == ""){
+      return null;
+    }
+    entrada = prompt("introdizca un numero mayor de 100;");
+    
+
+  }return entrada;
+} 
+console.log(pedirNumeroMayor100());
