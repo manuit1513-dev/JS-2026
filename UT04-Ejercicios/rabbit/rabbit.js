@@ -10,10 +10,10 @@ class Animal {
 
 class Rabbit extends Animal {
   constructor(name) {
-    this.name = name;
+    super(name); // debe ir super para q cree un Animal por asi decirlo
     this.created = Date.now();
   }
 }
 
 let rabbit = new Rabbit("Conejo Blanco"); // Error: this no está definido
-alert(rabbit.name);
+console.log(rabbit.name);
