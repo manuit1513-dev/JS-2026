@@ -14,4 +14,34 @@ function camelize(str){
     
     
 }
-console.log(camelize("background-color"));
+//console.log(camelize("background-color"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function camelizar2(str){
+    let separado = str.split("");
+    let posicion = separado.indexOf("-");
+    while(posicion != -1){
+        separado.splice(posicion, 2, separado[posicion+1].toUpperCase());
+        
+        posicion = separado.indexOf("-");
+    }
+    return separado.join("");
+}
+console.log(camelizar2("background-color") );
+console.log(camelizar2("list-style-image") );
+console.log(camelizar2("-webkit-transition") );
