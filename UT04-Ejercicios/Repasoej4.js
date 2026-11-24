@@ -9,11 +9,11 @@ genera un nuevo array tarjetas donde cada elemento sea un objeto con
 let usuarios = [
   { id: 1, nombre: "Ana", apellido: "Pérez", rol: "Editor" },
   { id: 2, nombre: "Luis", apellido: "Gómez" },
-  { id: 3, nombre: "Marta", apellido: "Ruiz", rol: "Admin" }
+  { id: 3, nombre: "Marta", apellido: "Ruiz", rol: "Admin" },
 ];
 
-function mostrarFicha({nombre, apellido, rol = "invitado"}){
-    return `${nombre} ${apellido} (${rol})`;
+function mostrarFicha({ nombre, apellido, rol = "invitado" }) {
+  return `${nombre} ${apellido} (${rol})`;
 }
 
 console.log(mostrarFicha(usuarios[0])); // "Ana Pérez (Editor)"
@@ -23,7 +23,12 @@ console.log(mostrarFicha(usuarios[1])); // "Luis Gómez (Invitado)"
 // hay que envolverlo entre paréntesis: => ({ ... })
 let tarjetas = usuarios.map(({ id, nombre, apellido }) => ({
   id,
-  nombreCompleto: `${nombre} ${apellido}`
+  nombreCompleto: `${nombre} ${apellido}`,
 }));
-console.log(tarjetas);
+//console.log(tarjetas);
 // [{ id: 1, nombreCompleto: "Ana Pérez" }, ...]
+
+let numeros1 = [4, 9, 2];
+let sinPrimero = numeros1.slice(1);
+console.log(sinPrimero);
+console.log(numeros1);
