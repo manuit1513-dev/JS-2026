@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-DOM children</title>
+  </head>
+  <body>
+    <div>Users:</div>
+    <ul>
+      <li>John</li>
+      <li>Pete</li>
+    </ul>
+    <script>
+      /*
+        Para cada una de las siguientes preguntas, da al menos una forma de cómo acceder a ellos:
+            * ¿El nodo <div> del DOM?
+      */
+      const div = document.body.firstElementChild;
+      /*
+       * ¿El nodo <ul> del DOM?
+       */
+      const ul = document.body.firstElementChild.nextElementSibling;
+      /*
+       * El segundo <li> (con Pete)?
+       */
+      const liPete = document.querySelectorAll("li")[1];
+
+      console.log(div);
+      console.log(ul);
+      console.log(liPete);
+    </script>
+  </body>
+</html>
